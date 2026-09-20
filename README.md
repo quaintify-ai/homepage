@@ -31,7 +31,7 @@ python3 -m http.server 8080
   `data-title-zh` / `data-title-en` / `data-desc-zh` / `data-desc-en`。`main.js` 会在
   切换语言时同步 `<title>`、`<meta name="description">`、`og:*` 和 `<html lang>`。
 - 待填写的信息用 `<span class="todo">` 标出（黄色虚线框），全站搜 `TODO` 即可找全。
-- 邮箱 `contact@quaintify.ai` 出现在 `index.html`、`privacy.html`、`terms.html` 三处
+- 邮箱 `contact@quaint-ai.com` 出现在 `index.html`、`privacy.html`、`terms.html` 三处
   正文和 footer 里，替换时请全局搜索。**此邮箱为占位，待确认。**
 - 配色在 `assets/style.css` 顶部的 `:root` 变量里；深色为默认，浅色在
   `@media (prefers-color-scheme: light)` 里，两套都要改。
@@ -42,7 +42,7 @@ python3 -m http.server 8080
 2. 仓库 **Settings → Pages → Build and deployment**：Source 选 **Deploy from a branch**，
    分支选 `main`，目录选 `/ (root)`（若放在 `docs/` 则选 `/docs`），Save。
 3. 等一两分钟，站点出现在 `https://<用户名>.github.io/<仓库名>/`。
-4. 绑定 `quaintify.ai`：同一页面的 **Custom domain** 填域名，GitHub 会在仓库根生成
+4. 绑定 `quaint-ai.com`：同一页面的 **Custom domain** 填域名，GitHub 会在仓库根生成
    `CNAME` 文件；同时在域名 DNS 处把根域 A 记录指向 GitHub Pages 的 IP（或把
    `www` 配 CNAME 指向 `<用户名>.github.io`），生效后勾选 **Enforce HTTPS**。
 5. `.nojekyll` 必须保留（空文件即可），否则 Jekyll 会忽略下划线开头的文件并拖慢构建。
@@ -56,7 +56,7 @@ python3 -m http.server 8080
 | 注册主体全称 | `index.html`、`privacy.html`、`terms.html` |
 | 注册地址 | `index.html`、`privacy.html`、`terms.html` |
 | 适用法律与争议管辖地 | `terms.html` 第七节 |
-| `contact@quaintify.ai` 是否为最终对外邮箱 | 三个页面 |
+| `contact@quaint-ai.com` 是否为最终对外邮箱 | 三个页面 |
 
 两个法律页顶部的「最后更新：2026-09-20」是本次撰写日期，正式发布时按实际上线日改。
 
