@@ -13,9 +13,6 @@
   --accent:    #5fd3bc;
   --accent-dim:#2d6f63;
   --focus:     #8fe3d1;
-  --todo-fg:   #e8c15c;
-  --todo-bg:   rgba(232, 193, 92, .10);
-  --todo-line: rgba(232, 193, 92, .45);
 
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
                "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC",
@@ -41,9 +38,6 @@
     --accent:    #0b6b5c;
     --accent-dim:#9ecdc3;
     --focus:     #0b6b5c;
-    --todo-fg:   #7a5400;
-    --todo-bg:   rgba(122, 84, 0, .07);
-    --todo-line: rgba(122, 84, 0, .40);
   }
 }
 
@@ -203,7 +197,6 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 html[data-lang="en"] .hero-statement { max-width: 52ch; }
 
-
 /* ---- sections ---------------------------------------------------------- */
 .section {
   padding: clamp(3rem, 7.5vw, 5rem) 0;
@@ -232,13 +225,12 @@ html[data-lang="en"] .hero-statement { max-width: 52ch; }
 
 /* ---- contact ----------------------------------------------------------- */
 .contact-mail {
-  margin: 0 0 1.75rem;
-  font-size: clamp(1.3rem, 4vw, 1.75rem);
-  letter-spacing: -.01em;
+  margin: 0;
+  font-size: 1rem;
 }
 .contact-mail a {
-  color: var(--fg-strong);
-  border-bottom: 1px solid var(--accent-dim);
+  color: var(--fg-muted);
+  border-bottom: 1px solid var(--line);
   padding-bottom: 2px;
   word-break: break-word;
 }
@@ -246,42 +238,6 @@ html[data-lang="en"] .hero-statement { max-width: 52ch; }
   color: var(--accent);
   border-bottom-color: var(--accent);
   text-decoration: none;
-}
-
-.facts { margin: 0; max-width: 58ch; }
-.fact {
-  display: grid;
-  grid-template-columns: 11rem 1fr;
-  gap: .25rem 1.5rem;
-  padding: .85rem 0;
-  border-top: 1px solid var(--line-soft);
-}
-.fact:first-of-type { border-top: 0; padding-top: 0; }
-.fact dt {
-  font-family: var(--font-mono);
-  font-size: .76rem;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--fg-faint);
-  padding-top: .3rem;
-}
-.fact dd { margin: 0; color: var(--fg); }
-.fact .mono {
-  font-family: var(--font-mono);
-  font-size: .92rem;
-  letter-spacing: .02em;
-}
-
-.todo {
-  display: inline-block;
-  font-family: var(--font-mono);
-  font-size: .8rem;
-  line-height: 1.5;
-  color: var(--todo-fg);
-  background: var(--todo-bg);
-  border: 1px dashed var(--todo-line);
-  border-radius: 3px;
-  padding: .2rem .55rem;
 }
 
 /* ---- legal pages ------------------------------------------------------- */
@@ -333,11 +289,6 @@ html[data-lang="en"] .hero-statement { max-width: 52ch; }
   font-size: .9rem;
   letter-spacing: .02em;
 }
-.footer-note {
-  margin: 0;
-  font-size: .82rem;
-  color: var(--fg-faint);
-}
 .footer-links {
   display: flex;
   flex-wrap: wrap;
@@ -352,8 +303,6 @@ html[data-lang="en"] .hero-statement { max-width: 52ch; }
   body { font-size: 16px; }
   :root { --pad: 1.25rem; }
 
-  .fact { grid-template-columns: 1fr; gap: .3rem; }
-  .fact dt { padding-top: 0; }
 }
 
 @media print {
